@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Animation for containers */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for text */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #3498db, 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db;
+  }
+  50% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff, 0 0 35px #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #3498db, 0 0 20px #db8d34, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db;
+  }
+}
+
+/* Animation for hover effect on containers */
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Roboto", sans-serif; /* Applied font family */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out; /* Animation for header */
+}
+
+.contain {
+  margin-top: 100px;
+  border-radius: 15px;
+  height: 350px;
+  width: 320px;
+  margin-left: 150px;
+  background-color: rgba(15, 13, 17, 0.3);
+  padding: 20px;
+  margin-left: 280px;
+  cursor: pointer;
+  animation: fadeInUp 1s ease-out; /* Animation for contain */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.contain:hover {
+  animation: hoverEffect 0.3s ease-in-out; /* Hover effect animation */
+}
+
+a {
+  cursor: pointer;
+}
+
+.containers {
+  display: flex;
+  font-size: 20px;
+  animation: fadeInUp 1s ease-out; /* Animation for containers */
+}
+
+.label {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-left: 20px;
+  animation: fadeInUp 1s 0.5s ease-out; /* Animation for label */
+}
+
+input {
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  margin-left: 20px;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 90px;
+  animation: fadeInUp 1s 0.7s ease-out; /* Animation for input fields */
+}
+
+.u {
+  margin-left: 5px;
+  width: 250px;
+  padding-left: 55px;
+}
+
+.l {
+  margin-left: 5px;
+  width: 250px;
+  padding-left: 55px;
+}
+
+p {
+  margin-top: 30px;
+  animation: fadeInUp 1s 0.9s ease-out; /* Animation for paragraphs */
+}
+
+.user,
+.use {
+  height: 40px;
+  width: 60px;
+  position: fixed; /* Changed to fixed for the image positioning */
+  left: 0;
+  margin-left: 300px;
+  margin-top: 15px;
+  animation: fadeInUp 1s 1.1s ease-out; /* Animation for user icons */
+}
+
+.use {
+  margin-left: 940px;
+}
+
+.finger,
+.fing {
+  height: 40px;
+  width: 40px;
+  position: fixed; /* Changed to fixed for the image positioning */
+  margin-top: 73px;
+  left: 0;
+  margin-left: 310px;
+  border-radius: 80px;
+  animation: fadeInUp 1s 1.3s ease-out; /* Animation for finger icons */
+}
+
+.fing {
+  margin-left: 950px;
+}
+
+.rem {
+  display: flex;
+  font-size: 16px;
+  animation: fadeInUp 1s 1.5s ease-out; /* Animation for reminder text */
+}
+
+p {
+  margin-left: 15px;
+}
+
+#f {
+  margin-left: 35px;
+  position: absolute;
+  animation: fadeInUp 1s 1.7s ease-out; /* Animation for #f */
+}
+
+#chk {
+  margin-top: 25px;
+  height: 50px;
+  animation: fadeInUp 1s 1.9s ease-out; /* Animation for checkbox */
+}
+
+#button {
+  height: 45px;
+  width: 150px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: gold; /* Changed button color to golden */
+  border-radius: 20px;
+  font-size: 18px;
+  color: black; /* Changed text color to black for better contrast */
+  cursor: pointer;
+  margin-left: 90px;
+  margin-top: 15px;
+  position: absolute;
+  transition: opacity 0.3s, transform 0.2s; /* Smooth transitions */
+  animation: fadeInUp 1s 2.1s ease-out; /* Animation for button */
+}
+
+#button:hover {
+  opacity: 0.9;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+h1 {
+  margin-left: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  animation: textGlow 2s infinite; /* Glowing text animation */
+}
+
+.vit {
+  margin-left: 100px;
+  margin-top: 20px;
+  border-radius: 20px;
+  height: 160px;
+  animation: fadeInUp 1s 2.3s ease-out; /* Animation for vit */
+}
+
+.line-break {
+  display: block;
+  margin-top: 10px;
+}
+
+.info {
+  margin-left: 150px;
+  animation: fadeInUp 1s 2.5s ease-out; /* Animation for info */
+}
+
+.head {
+  display: flex;
+  animation: fadeInUp 1s 2.7s ease-out; /* Animation for head */
+}
+
+#h {
+  margin-left: 0px;
+  margin-bottom: 5px;
+  color: rgb(110, 14, 14);
+  animation: fadeInUp 1s 2.9s ease-out; /* Animation for #h */
+}
+
+.pp {
+  color: rgb(192, 192, 210);
+  animation: fadeInUp 1s 3.1s ease-out; /* Animation for .pp */
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it is above all other elements */
+}
+
+.error-message {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.2em;
+  animation: fadeInUp 1s ease-out; /* Animation for error message */
+}

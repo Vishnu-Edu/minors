@@ -1,0 +1,75 @@
+/* Success.css */
+.success-container {
+     display: flex;
+     justify-content: center; /* Center horizontally */
+     align-items: center; /* Center vertically */
+     height: 100vh; /* Full viewport height */
+     background: linear-gradient(135deg, #f0f4f8, #e1e8f0); /* Light gradient background */
+     overflow: hidden; /* Hide overflow for animation */
+     position: relative; /* Position relative for absolute positioning of stars */
+   }
+   
+   .success-message {
+     padding: 40px;
+     background: linear-gradient(145deg, #4f9cff, #00c9a0); /* Bright gradient background for message */
+     border: 2px solid #00a859; /* Matching border color */
+     border-radius: 15px;
+     color: #ffffff; /* White text for contrast */
+     text-align: center;
+     font-size: 24px; /* Larger font size for emphasis */
+     font-weight: 700; /* Bold text */
+     max-width: 600px; /* Max width for better readability */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+     animation: fadeInUp 1s ease-out; /* Fade-in and slide-up animation */
+     position: relative; /* Ensure it stacks above stars */
+     z-index: 1; /* Ensure it is above the stars */
+   }
+   
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+   
+   /* Stars animation */
+   @keyframes twinkling {
+     0% { opacity: 0; }
+     50% { opacity: 1; }
+     100% { opacity: 0; }
+   }
+   
+   @keyframes blast {
+     0% { transform: scale(0); opacity: 1; }
+     100% { transform: scale(5); opacity: 0; }
+   }
+   
+   .stars {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none; /* Ensure stars do not interfere with interactions */
+     overflow: hidden;
+     z-index: 0; /* Ensure stars are behind the message */
+   }
+   
+   .stars::before {
+     content: "";
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 100px;
+     height: 100px;
+     background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 20%, transparent 20%) repeat;
+     background-size: 2px 2px; /* Size of stars */
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     animation: blast 2s ease-out infinite; /* Blasting effect */
+   }
+   

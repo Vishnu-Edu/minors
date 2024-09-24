@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Animation for containers */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for text */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #3498db, 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db;
+  }
+  50% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff, 0 0 35px #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #3498db, 0 0 20px #3498db, 0 0 25px #3498db, 0 0 30px #3498db, 0 0 35px #3498db;
+  }
+}
+
+.student-details-container {
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa); /* Soft gradient background */
+  color: #333; /* Darker text color for better readability */
+  height: 100vh;
+  font-size: 25px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  animation: fadeInUp 1s ease-out; /* Fade-in animation for container */
+}
+
+h1 {
+  font-size: 35px;
+  color: #2c3e50; /* Dark color for the heading */
+  margin-bottom: 20px;
+  text-align: center; /* Centered heading */
+  animation: textGlow 2s infinite; /* Glowing text animation */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove double borders */
+  background-color: #ffffff; /* White background for table */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for table */
+  overflow: hidden; /* Clip any overflow */
+  animation: fadeInUp 1s 0.5s ease-out; /* Fade-in animation for table */
+}
+
+th, td {
+  padding: 15px; /* Padding for cells */
+  border-bottom: 1px solid #dcdcdc; /* Light grey border for rows */
+  text-align: left;
+}
+
+th {
+  background-color: #3498db; /* Blue background for header */
+  color: #ffffff; /* White text color for header */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey for alternate rows */
+}
+
+tr:hover {
+  background-color: #e0f7fa; /* Light cyan on hover */
+}
+
+.modify-button {
+  background-color: #ff5722; /* Vibrant orange for button */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+}
+
+.modify-button:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.modify-button:active {
+  background-color: #d84315; /* Even darker orange when button is pressed */
+}
+
+.delete-button {
+  background-color: #ff1900; /* Strong red for button */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+  margin-left: 30px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.delete-button:active {
+  background-color: #a93226; /* Even darker red when button is pressed */
+}
+
+/* Additional styles for better layout and spacing */
+.student-details-container table {
+  margin: 0 auto; /* Center the table */
+  max-width: 90%; /* Limit table width for better appearance */
+}
+
+@media (max-width: 768px) {
+  /* Responsive design for smaller screens */
+  .student-details-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .modify-button, .delete-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
